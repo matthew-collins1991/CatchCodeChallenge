@@ -13,6 +13,7 @@ def invalid_input
   return false
 end
 
+# check if value input is a float(will return valid if integer)
 def validate_float(input)
   begin
     value = Float(input)
@@ -22,6 +23,7 @@ def validate_float(input)
   return validate_2dp(value)
 end
 
+# if value is a float, will check that it is no more than two decimal places
 def validate_2dp(value)
   # turn into string, split by decimal, check length of right hand side.
   string_value = value.to_s

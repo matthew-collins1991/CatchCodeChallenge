@@ -1,7 +1,6 @@
 require 'tty-prompt'
 require 'pry'
 require 'artii'
-require 'rainbow'
 
 require_relative "./lib/program.rb"
 require_relative "./lib/helper_methods.rb"

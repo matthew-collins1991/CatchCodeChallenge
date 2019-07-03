@@ -1,7 +1,7 @@
 
 def welcome
   title = Artii::Base.new :font => 'doom'
-  puts Rainbow(title.asciify('Welcome to Funky Finance!'))
+  puts title.asciify('Welcome to Funky Finance!')
   sleep 1.5
   run = Program.new
   run.opening_question

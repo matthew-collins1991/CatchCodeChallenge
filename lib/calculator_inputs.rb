@@ -4,6 +4,7 @@ def ask_for_interest_rate
   if validate_float(interest_rate_value) == false
     ask_for_interest_rate
   else
+    # return float value divided by 100 to create percentage.
     return validate_float(interest_rate_value)/100
   end
 end
