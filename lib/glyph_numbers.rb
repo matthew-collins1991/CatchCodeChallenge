@@ -17,28 +17,26 @@ class Glyphs
 @@glyph_space = ["=", " ", " ", " ", " ", " ", "="]
 
 
-
-
-def print_glyph(number)
-  number_array = number.to_s.split("")
-  i = 0
-  loop do
-    number_array.map { |n|
-    if n == '.'
-        print @@glyph_dot[i]
-        print @@glyph_space[i]
-    else
-        print @@glyph[n.to_i][i]
-        print @@glyph_space[i]
-    end
-    }
-    puts ""
-    i += 1
-    if i > 7
-      break
+  def print_glyph(number)
+    number_array = number.to_s.split("")
+    i = 0
+    loop do
+      number_array.map { |n|
+      if n == '.'
+          print @@glyph_dot[i]
+          print @@glyph_space[i]
+      else
+          print @@glyph[n.to_i][i]
+          print @@glyph_space[i]
+      end
+      }
+      puts ""
+      i += 1
+        if i > 7
+          break
+        end
     end
   end
 
-end
-
+# class end
 end

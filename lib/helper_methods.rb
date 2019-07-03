@@ -8,15 +8,21 @@ class String
   end
 end
 
-def valdidate_input(input)
-  if input.is_a? Numeric
-    return true
-  else
+def validate(input)
+  begin
+    value = Float(input)
+  rescue
     puts "invalid input! please input a number to two decimal places".print_slowly
     return false
   end
+  return value
 end
 
+
+def run_glyph_class(input)
+  value = Glyphs.new
+  value.print_glyph(input)
+end
 
 
 

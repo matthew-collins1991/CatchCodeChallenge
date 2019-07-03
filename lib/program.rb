@@ -1,10 +1,8 @@
 
 def welcome
   puts 'Welcome to Funky Finance!'.print_slowly
-  test = Glyphs.new
-  test.print_glyph(12345.67089)
-  # run = Program.new
-  # run.opening_question
+  run = Program.new
+  run.opening_question
 end
 
 
@@ -29,26 +27,22 @@ class Program
           case response
             #
             when "I"
-              @@choices = @@choices.select do |choice| choice != "I"
-              end
+              @@choices = @@choices.select{|choice| choice != "I"}
                @interest = ask_for_interest
                opening_question
                #
             when "P"
-              @@choices = @@choices.select do |choice| choice != "P"
-              end
+              @@choices = @@choices.select {|choice| choice != "P"}
               @money_borrowed = ask_for_money_borrowed
               opening_question
               #
             when "r"
-              @@choices = @@choices.select do |choice| choice != "r"
-              end
+              @@choices = @@choices.select{|choice| choice != "r"}
               @interest_rate = ask_for_interest_rate
               opening_question
               #
             when "t"
-              @@choices = @@choices.select do |choice| choice != "t"
-              end
+              @@choices = @@choices.select {|choice| choice != "t"}
               @time_period = ask_for_time_period
               opening_question
           end

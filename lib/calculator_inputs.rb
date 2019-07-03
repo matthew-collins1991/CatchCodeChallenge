@@ -1,25 +1,41 @@
 def ask_for_interest_rate
-  puts "What is the interest rate?".print_slowly
-  interest_rate_value = gets.strip.to_f
-  return interest_rate_value
+  puts "What is the interest rate (as a %)?".print_slowly
+  interest_rate_value = gets.strip
+  if validate(interest_rate_value) == false
+    ask_for_interest_rate
+  else
+    return validate(interest_rate_value)/100
+  end
 end
 
 
 def ask_for_interest
   puts "How much interest will be paid?".print_slowly
-  interest_value = gets.strip.to_f
-  return interest_value
+  interest_value = gets.strip
+  if validate(interest_value) == false
+    ask_for_interest
+  else
+    return validate(interest_value)
+  end
 end
 
 def ask_for_money_borrowed
   puts "How much money will be borrowed?".print_slowly
-  money_borrowed = gets.strip.to_f
-  return money_borrowed
+  money_borrowed = gets.strip
+  if validate(money_borrowed) == false
+    ask_for_money_borrowed
+  else
+    return validate(money_borrowed)
+  end
 end
 
 
 def ask_for_time_period
   puts "How much time will be needed (years)?".print_slowly
-  time_period = gets.strip.to_f
-  return time_period
+  time_period = gets.strip
+  if validate(time_period) == false
+    ask_for_time_period
+  else
+    return validate(time_period)
+  end
 end
