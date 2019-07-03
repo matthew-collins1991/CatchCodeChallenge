@@ -1,8 +1,10 @@
 
 def welcome
   puts 'Welcome to Funky Finance!'.print_slowly
-  run = Program.new
-  run.opening_question
+  test = Glyphs.new
+  test.print_glyph(12345.67089)
+  # run = Program.new
+  # run.opening_question
 end
 
 

@@ -1,27 +1,23 @@
 def calculate_interest_rate(i,p,t)
-  interest = i
-  money_borrowed = p
-  time = t
-  puts "Interest Rate = #{interest}/ #{money_borrowed} x #{time}"
+  interest_rate = i/(p * t)
+  puts "Interest Rate = interest / money borrowed x time".print_slowly
+  puts "#{interest_rate}"
 end
 
 def calculate_interest(r,p,t)
-  interest_rate = r
-  money_borrowed = p
-  time = t
-  puts "Interest = #{interest_rate} x #{money_borrowed} x #{time}"
+  interest = r * p * t
+  puts "Interest = interest rate x money borrowed x time".print_slowly
+  puts "#{interest}"
 end
 
 def calculate_money_borrowed(i,r,t)
-  interest = i
-  interest_rate = r
-  time = t
-  puts "Money Borrowed = #{interest}/ #{interest_rate} x #{time}"
+  money_borrowed = i / (r * t)
+  puts "Money Borrowed = interest / interest rate x time".print_slowly
+  puts "#{money_borrowed}"
 end
 
 def calculate_time(i,p,r)
-  interest = i
-  money_borrowed = p
-  interest_rate = r
-  puts "Time = #{interest}/ #{money_borrowed} x #{interest_rate}"
+  time = i / (p * r)
+  puts "Time = interest / money borrowed x interest rate".print_slowly
+  puts "#{time}"
 end
